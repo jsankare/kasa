@@ -1,0 +1,21 @@
+.kasa__banner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links__container {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    gap: 50px;
+}
+
+.links__container li a {
+    text-decoration: none;
+    color: #FF6060;
+    font-size: 24px;
+}
+
+.links__container li a:hover {
+    text-decoration: underline;
+}
