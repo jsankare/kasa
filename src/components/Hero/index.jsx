@@ -1,12 +1,12 @@
 import React from "react";
-// import background from '../../assets/hero__home.png';
-import './hero.css';
+import style from './hero.module.css';
 
-function Hero() {
+function Hero(props) {
     return (
-        <section className="hero__wrapper">
-            <div className="hero__container">
-                <p className="hero__text">Chez vous, partout et ailleurs</p>
+        <section className={style.wrapper}>
+            <div className={style.container}>
+                <img className={style.cover}  src={props.cover} alt="" />
+                <p className={style.text}>{props.title}</p>
             </div>
         </section>
     );

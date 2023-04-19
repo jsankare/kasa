@@ -1,17 +1,18 @@
 import React from 'react';
-import './header.css';
+import style from './header.module.css';
 import logo from '../../assets/kasa.png'
+import {Link} from 'react-router-dom'
 
 function Header() {
     return (
-        <div className="kasa__banner">
-            <div className="logo__container">
+        <div className={style.banner}>
+            <div className={style.logo__container}>
                 <a href="null"><img src={logo} alt="" /></a>
             </div>
-            <div className="links">
-                <ul className="links__container">
-                    <li><a href="null">Accueil</a></li>
-                    <li><a href="null">A propos</a></li>
+            <div className={style.links}>
+                <ul className={style.links__container}>
+                    <li><Link to='/'>Accueil</Link></li>
+                    <li><Link to='/about'>A propos</Link></li>
                 </ul>
             </div>
         </div>

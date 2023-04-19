@@ -1,6 +1,7 @@
-.kasa__banner {
+.banner {
     display: flex;
     justify-content: space-between;
+    padding: 30px 60px
 }
 
 .links__container {
