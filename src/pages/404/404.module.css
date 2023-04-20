@@ -1,0 +1,18 @@
+.container {
+    text-align: center;
+    color: #FF6060;
+}
+
+.title {
+    font-size: 288px;
+    margin: 80px 0 5px 0;
+}
+
+.subtitle {
+    font-size: 36px;
+}
+
+.link a{
+    text-decoration: none;
+    color: #FF6060;
+}

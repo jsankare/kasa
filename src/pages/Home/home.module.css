@@ -8,3 +8,12 @@
     border-radius: 15px;
     justify-items: center;
 }
+
+@media only screen and (max-width: 420px) {
+    .apartments {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: 0;
+    }
+}

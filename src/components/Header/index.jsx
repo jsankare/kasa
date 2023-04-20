@@ -7,7 +7,7 @@ function Header() {
     return (
         <div className={style.banner}>
             <div className={style.logo__container}>
-                <a href="null"><img src={logo} alt="" /></a>
+            <Link to='/'><img src={logo} alt="" /></Link>
             </div>
             <div className={style.links}>
                 <ul className={style.links__container}>
