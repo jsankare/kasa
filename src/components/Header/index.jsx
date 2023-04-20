@@ -2,6 +2,7 @@ import React from 'react';
 import style from './header.module.css';
 import logo from '../../assets/kasa.png'
 import {Link} from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 
 function Header() {
     return (
@@ -11,8 +12,8 @@ function Header() {
             </div>
             <div className={style.links}>
                 <ul className={style.links__container}>
-                    <li><Link to='/'>Accueil</Link></li>
-                    <li><Link to='/about'>A propos</Link></li>
+                    <li><NavLink to='/'>Accueil</NavLink></li>
+                    <li><NavLink to='/about'>A propos</NavLink></li>
                 </ul>
             </div>
         </div>

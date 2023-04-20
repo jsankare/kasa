@@ -23,7 +23,7 @@
     font-size: 24px;
 }
 
-.links__container li a:hover {
+.links__container li a[class='active'], .links__container li a:hover {
     text-decoration: underline;
 }
 
