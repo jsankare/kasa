@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import style from './App.module.css';
 import {Routes, Route} from 'react-router-dom'
 
 import Header from './components/Header';
@@ -11,14 +11,19 @@ import Missdirection from './pages/404';
 function App() {
 return (
 <>
-    <Header />
-    <Routes>
-      <Route path="/" Component={Home} />
-      <Route path="/about" Component={About} />
-      {/* <Route path="/:id" Component={Housing} /> */}
-      <Route path="/*" Component={Missdirection} />
-    </Routes>
-    <Footer />
+  <main className={style.main}>
+    <div className={style.container}>
+      <Header />
+      <Routes>
+        <Route path="/" Component={Home} />
+        <Route path="/about" Component={About} />
+        {/*
+        <Route path="/:id" Component={Housing} /> */}
+        <Route path="/*" Component={Missdirection} />
+      </Routes>
+    </div>
+  </main>
+  <Footer />
 </>
 )
 }
