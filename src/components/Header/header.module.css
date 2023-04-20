@@ -1,3 +1,8 @@
+.logo__container a img {
+    width: 210px;
+    height: 68px;
+}
+
 .banner {
     display: flex;
     justify-content: space-between;
@@ -19,4 +24,17 @@
 
 .links__container li a:hover {
     text-decoration: underline;
+}
+
+@media only screen and (max-width:420px) {
+    .logo__container a img {
+        width: 145px;
+        height: 47px;
+    }
+    .banner {
+        padding: 30px 10px;
+    }
+    .links__container li a {
+        font-size: 18px;
+    }
 }

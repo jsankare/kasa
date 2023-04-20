@@ -11,8 +11,7 @@ function Home() {
         <Hero cover={cover} title='Chez vous, partout et ailleurs'/>
         <div className={style.apartments}>
             {data.map(apartment =>
-                <Apartment title={apartment.title} cover={apartment.cover}/>  // onClick={window.open(`/housing/{id}`,"myWindow")} ?
-                
+                <Apartment title={apartment.title} cover={apartment.cover} key={apartment.id}/>  // onClick={window.open(`/housing/{id}`,"myWindow")} ?
                 )}
         </div>
      </>
