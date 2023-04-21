@@ -1,6 +1,7 @@
 .container {
     width: 335px;
     height: 255px;
+    cursor: pointer;
 }
 
 .wrapper {

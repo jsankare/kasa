@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from './dropdowns.module.css';
-import imgOpen from '../../assets/Vector.png'
-import imgClosed from '../../assets/Vectorc.png'
+import imgOpen from '../../assets/arrowUp.png'
+import imgClosed from '../../assets/arrowDown.png'
 
 const Dropdown = ({title, content}) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +19,7 @@ const Dropdown = ({title, content}) => {
                 {isOpen && <p className={style.content}>{content}</p>}
             </div>
         </section>
-    )
+    );
 }
 
 export default Dropdown

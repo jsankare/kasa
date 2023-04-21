@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "../../components/Hero";
 import cover from '../../assets/hero__about.png'
 import Dropdowns from "../../components/Dropdown";
+import style from './about.module.css'
 
 const dropdowns = [{
     "title": "Fiabilité",
@@ -26,7 +27,7 @@ function About() {
     return (
      <>
      <Hero cover={cover}/>
-     <div>
+     <div className={style.container}>
         {dropdowns.map(dropdown =>
             <Dropdowns title={dropdown.title} content={dropdown.content} key={dropdown.id}/>
             )}

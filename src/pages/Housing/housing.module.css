@@ -1,0 +1,38 @@
+.main {
+    padding: 100px;
+    width: 1250px;
+}
+
+.infos {
+    display: flex;
+    color: #FF6A6A;
+    justify-content: space-between;
+}
+
+.flat {
+    max-width: 40%;
+}
+
+.intel {
+    display: flex;
+}
+
+.intel span {
+    max-width: 100px;
+}
+
+.intel img {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+}
+
+.rating {
+    display: flex;
+}
+
+.dropdowns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
