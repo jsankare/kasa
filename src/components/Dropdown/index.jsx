@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import style from './dropdowns.module.css';
+import PropTypes from 'prop-types'
 import imgOpen from '../../assets/arrowUp.png'
 import imgClosed from '../../assets/arrowDown.png'
 
-const Dropdown = ({title, content}) => {
+const Dropdown = ({title, children}) => {
     const [isOpen, setIsOpen] = useState(false);
     const handleIsOpen = () => {
         setIsOpen(!isOpen);
@@ -15,11 +16,14 @@ const Dropdown = ({title, content}) => {
                 <h2 className={style.title}>{title}</h2>
                 <img className={style.img} src={isOpen ? imgOpen : imgClosed} alt="" />
             </div>
-            <div>
-                {isOpen && <p className={style.content}>{content}</p>}
-            </div>
+            {isOpen && <div className={style.content}>{children}</div>}
         </section>
     );
+}
+
+Dropdown.propTypes = {
+    title: PropTypes.string.isRequired,
+    children: PropTypes.element.isRequired
 }
 
 export default Dropdown

@@ -4,13 +4,14 @@ import slideLeft from '../../assets/arrowleft.png';
 import slideRight from '../../assets/arrowright.png';
 import { useState } from 'react';
 
-const Slider = ({sliderImage}) => {
+const Slider = ({sliderImage = []}) => {
     
     const [currentIndex, setCurrentIndex] = useState(0)
 
     const nextSlide = () => {
-        setCurrentIndex(currentIndex + 1)
-        if(currentIndex === sliderImage?.length - 1)
+        // useState(prevState => prevState +1)
+        setCurrentIndex(currentIndex + 1);
+        if(currentIndex === sliderImage.length - 1)
             setCurrentIndex(0)
     };
 
@@ -20,8 +21,8 @@ const Slider = ({sliderImage}) => {
             setCurrentIndex(sliderImage?.length - 1)
     };
 
-    console.log(`sliderImage: ${sliderImage}`); // Check if sliderImage is defined
-    console.log(`currentIndex: ${currentIndex}`); // Check the value of currentIndex
+    console.log(`sliderImage: ${sliderImage}`);
+    console.log(`currentIndex: ${currentIndex}`);
     
     return (
         <section style={{backgroundImage : `url(${sliderImage?.[currentIndex]})`}} className='carousel'>
