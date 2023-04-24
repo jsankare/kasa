@@ -3,8 +3,8 @@ import Dropdown from '../../components/Dropdown';
 import Slider from '../../components/Slider'
 import data from '../../datas/datas.json';
 import style from './housing.module.css';
-import { Link, useParams } from 'react-router-dom';
-import { element } from "prop-types";
+import { useParams } from 'react-router-dom';
+// import { element } from "prop-types";
 
 function Housing() {
 

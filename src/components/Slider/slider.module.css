@@ -1,3 +1,28 @@
-img {
-    color: red;
+.slider {
+    height: 415px;
+    width: 1240px;
+    position: relative;
+}
+
+.sliderLeftArrow, .sliderRightArrow {
+    height: 80px;
+    position: absolute;
+    top: 45%;
+}
+
+.sliderRightArrow{
+    right: 23px;
+}
+
+.sliderLeftArrow{
+    left: 23px;
+}
+
+.counter {
+    position: absolute;
+    bottom: 23px;
+    font-size: 18px;
+    font-weight: 500;
+    left: 50%;
+    color: white;
 }

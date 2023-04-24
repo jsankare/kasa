@@ -1,13 +1,12 @@
-import { render, screen, fireEvent } from "@testing-library/react"
-import Dropdown from "."
-import { click } from "@testing-library/user-event/dist/click"
+import { render, screen, fireEvent } from "@testing-library/react";
+import Dropdown from ".";
 
 describe('<Dropdown/>', () =>{
     it('Renders close by default', () => {
         const title = 'toto'
         const content = 'totocontent'
 
-        render(<Dropdown title={title} content={content} />);
+        render(<Dropdown title={title}> <span>{content}</span> </Dropdown>);
 
         expect(screen.getByText(title)).toBeInTheDocument();
         expect(screen.queryByText(content)).not.toBeInTheDocument();
@@ -17,7 +16,7 @@ describe('<Dropdown/>', () =>{
         const title = 'toto'
         const content = 'totocontent'
 
-        render(<Dropdown title={title} content={content} />);
+        render(<Dropdown title={title}>{content}</Dropdown>);
         fireEvent.click(screen.getByText(title));
 
         expect(screen.getByText(title)).toBeInTheDocument();
@@ -28,7 +27,7 @@ describe('<Dropdown/>', () =>{
         const title = 'toto'
         const content = 'totocontent'
 
-        render(<Dropdown title={title} content={content} />);
+        render(<Dropdown title={title}>{content}</Dropdown>);
         fireEvent.click(screen.getByText(title));
         fireEvent.click(screen.getByText(title));
 

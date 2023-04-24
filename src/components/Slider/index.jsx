@@ -1,8 +1,9 @@
 import React from "react";
-import style from './slider.module.css';
+import style from "./slider.module.css";
 import slideLeft from '../../assets/arrowleft.png';
 import slideRight from '../../assets/arrowright.png';
 import { useState } from 'react';
+import PropTypes from 'prop-types'
 
 const Slider = ({sliderImage = []}) => {
     
@@ -25,26 +26,33 @@ const Slider = ({sliderImage = []}) => {
     console.log(`currentIndex: ${currentIndex}`);
     
     return (
-        <section style={{backgroundImage : `url(${sliderImage?.[currentIndex]})`}} className='carousel'>
+        <section className={style.slider}>
+            <img src={sliderImage?.[currentIndex]} alt="" data-testid='current' />
             {sliderImage?.length > 1 && 
                 <>
                     <img 
-                        className='carousel_arrow carousel_arrow_left' 
+                        className={style.sliderLeftArrow}
                         src={slideLeft} 
                         alt="show previous slider" 
+                        data-testid='previous'
                         onClick={previousSlide}
                     />
                     <img 
-                        className='carousel_arrow carousel_arrow_right' 
+                        className={style.sliderRightArrow}
                         src={slideRight} 
                         alt="show next slider" 
+                        data-testid='next'
                         onClick={nextSlide}
                     />
-                    <p className='slideCount'>{currentIndex + 1} / {sliderImage?.length}</p>
+                    <p className={style.counter}>{currentIndex + 1} / {sliderImage?.length}</p>
                 </>
             } 
         </section>
     );
+}
+
+Slider.propTypes = {
+    sliderImage: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
 export default Slider;
