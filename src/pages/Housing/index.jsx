@@ -3,8 +3,8 @@ import Dropdown from '../../components/Dropdown';
 import Slider from '../../components/Slider'
 import data from '../../datas/datas.json';
 import style from './housing.module.css';
+// import Tag from '../../components/Tag'
 import { useParams } from 'react-router-dom';
-// import { element } from "prop-types";
 
 function Housing() {
 
@@ -30,8 +30,8 @@ function Housing() {
                 </div>
                 <div className={style.host}>
                     <div className={style.intel}>
-                        <span>{host.name}</span>
-                        <img src={host.picture} alt="host" />
+                        <span className={style.name}>{host.name}</span>
+                        <img className={style.photo} src={host.picture} alt="host" />
                     </div>
                     <div className={style.rating}>
                         <p>{rating}</p>  

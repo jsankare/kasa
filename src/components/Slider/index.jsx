@@ -21,9 +21,6 @@ const Slider = ({sliderImage = []}) => {
         if(currentIndex === 0)
             setCurrentIndex(sliderImage?.length - 1)
     };
-
-    console.log(`sliderImage: ${sliderImage}`);
-    console.log(`currentIndex: ${currentIndex}`);
     
     return (
         <section className={style.slider}>
