@@ -3,6 +3,12 @@
     width: 1250px;
 }
 
+.slider { 
+    height: 415px;
+    width: 1240px;
+    position: relative;
+}
+
 .infos {
     display: flex;
     color: #FF6A6A;
@@ -11,6 +17,27 @@
 
 .flat {
     max-width: 40%;
+}
+
+.title {
+    font-size: 36px;
+}
+
+.location {
+    font-size: 18px;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #FF6060;
+    border-radius: 10px;
+    color: white;
+    padding: 5px 30px;
+    font-size: 14px;
 }
 
 .intel {

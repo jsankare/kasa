@@ -11,7 +11,7 @@ function Housing() {
     const idHousing = useParams('id').id
     const currentHousing = data.find(data => data.id === idHousing);
 
-    const {title, location, host, rating, equipments, description, pictures} = currentHousing
+    const {title, location, host, rating, equipments, description, tags, pictures} = currentHousing
 
     return (
         <section className={style.main}>
@@ -20,8 +20,13 @@ function Housing() {
             </div>
             <div className={style.infos}>
                 <div className={style.flat}>
-                    <h2>{title}</h2>
-                    <h3>{location}</h3>
+                    <h2 className={style.title}>{title}</h2>
+                    <h3 className={style.location}>{location}</h3>
+                    <div className={style.tags}>
+                    {tags.map((tag, index) => (
+                        <span key={index} className={style.tag}>{tag}</span>
+                    ))}
+                    </div>
                 </div>
                 <div className={style.host}>
                     <div className={style.intel}>

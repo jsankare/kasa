@@ -27,7 +27,7 @@ const Slider = ({sliderImage = []}) => {
     
     return (
         <section className={style.slider}>
-            <img src={sliderImage?.[currentIndex]} alt="" data-testid='current' />
+            <img src={sliderImage?.[currentIndex]} className={style.flat} alt="" data-testid='current' />
             {sliderImage?.length > 1 && 
                 <>
                     <img 
