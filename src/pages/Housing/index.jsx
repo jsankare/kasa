@@ -1,15 +1,20 @@
-import React from "react";
 import Dropdown from '../../components/Dropdown';
 import Slider from '../../components/Slider'
 import data from '../../datas/datas.json';
 import style from './housing.module.css';
 // import Tag from '../../components/Tag'
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 
 function Housing() {
 
     const idHousing = useParams('id').id
     const currentHousing = data.find(data => data.id === idHousing);
+
+    if (!currentHousing) {
+        return (
+            <Navigate to="/404"/>
+        )
+    }
 
     const {title, location, host, rating, equipments, description, tags, pictures} = currentHousing
 
