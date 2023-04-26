@@ -2,8 +2,9 @@ import Dropdown from '../../components/Dropdown';
 import Slider from '../../components/Slider'
 import data from '../../datas/datas.json';
 import style from './housing.module.css';
-// import Tag from '../../components/Tag'
+import Tag from '../../components/Tag'
 import { Navigate, useParams } from 'react-router-dom';
+import Rating from '../../components/Rating';
 
 function Housing() {
 
@@ -17,7 +18,6 @@ function Housing() {
     }
 
     const {title, location, host, rating, equipments, description, tags, pictures} = currentHousing
-
     return (
         <section className={style.main}>
             <div className={style.slider}>
@@ -28,8 +28,8 @@ function Housing() {
                     <h2 className={style.title}>{title}</h2>
                     <h3 className={style.location}>{location}</h3>
                     <div className={style.tags}>
-                    {tags.map((tag, index) => (
-                        <span key={index} className={style.tag}>{tag}</span>
+                    {tags.map((tag) => (
+                        <Tag content={tag}/>
                     ))}
                     </div>
                 </div>
@@ -39,7 +39,7 @@ function Housing() {
                         <img className={style.photo} src={host.picture} alt="host" />
                     </div>
                     <div className={style.rating}>
-                        <p>{rating}</p>  
+                        <Rating rating={rating}/> 
                     </div>
                 </div>
             </div>
