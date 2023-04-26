@@ -46,10 +46,11 @@
 .intel {
     display: flex;
     align-items: center;
+    text-align: right;
 }
 
 .name {
-    width: 30%;
+    width: 50%;
     font-size: 18px;
 }
 
