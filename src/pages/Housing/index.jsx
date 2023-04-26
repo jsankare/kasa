@@ -2,7 +2,7 @@ import Dropdown from '../../components/Dropdown';
 import Slider from '../../components/Slider'
 import data from '../../datas/datas.json';
 import style from './housing.module.css';
-// import Tag from '../../components/Tag'
+import Tag from '../../components/Tag'
 import { Navigate, useParams } from 'react-router-dom';
 
 function Housing() {
@@ -28,8 +28,8 @@ function Housing() {
                     <h2 className={style.title}>{title}</h2>
                     <h3 className={style.location}>{location}</h3>
                     <div className={style.tags}>
-                    {tags.map((tag, index) => (
-                        <span key={index} className={style.tag}>{tag}</span>
+                    {tags.map((tag) => (
+                        <Tag content={tag}/>
                     ))}
                     </div>
                 </div>
