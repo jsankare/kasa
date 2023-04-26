@@ -4,6 +4,7 @@ import data from '../../datas/datas.json';
 import style from './housing.module.css';
 import Tag from '../../components/Tag'
 import { Navigate, useParams } from 'react-router-dom';
+import Rating from '../../components/Rating';
 
 function Housing() {
 
@@ -17,7 +18,7 @@ function Housing() {
     }
 
     const {title, location, host, rating, equipments, description, tags, pictures} = currentHousing
-
+    console.log(tags)
     return (
         <section className={style.main}>
             <div className={style.slider}>
@@ -39,7 +40,7 @@ function Housing() {
                         <img className={style.photo} src={host.picture} alt="host" />
                     </div>
                     <div className={style.rating}>
-                        <p>{rating}</p>  
+                        <Rating rating={rating}/> 
                     </div>
                 </div>
             </div>
