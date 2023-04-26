@@ -18,7 +18,6 @@ function Housing() {
     }
 
     const {title, location, host, rating, equipments, description, tags, pictures} = currentHousing
-    console.log(tags)
     return (
         <section className={style.main}>
             <div className={style.slider}>
