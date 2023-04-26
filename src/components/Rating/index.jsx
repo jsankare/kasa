@@ -8,11 +8,15 @@ function Rating({ rating }) {
     const stars = [];
 
     for (let i = 1; i <= 5; i++) {
-      const starClassName = i <= rating ? style.filled : style.empty;
+        const isActive = i <= rating;
+      const starClassName = isActive ? style.filled : style.empty;
+      const dataId = isActive ? 'active' : 'inactive';
       stars.push(
         <Star
+          role='star'
           alt=""
-          className={`${style.star} ${starClassName}`}
+          className={starClassName}
+           data-testid={dataId}
           key={i}
         />
       );
