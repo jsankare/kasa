@@ -9,7 +9,6 @@ const Dropdown = ({title, children, size='medium'}) => {
     const handleIsOpen = () => {
         setIsOpen(!isOpen);
     };
-console.log(style);
     return (
         <section className={`${style.container} ${style[size]}`} >
             <div className={style.wrapper} onClick={handleIsOpen}>

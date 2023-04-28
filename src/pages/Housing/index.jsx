@@ -28,8 +28,8 @@ function Housing() {
                     <h2 className={style.title}>{title}</h2>
                     <h3 className={style.location}>{location}</h3>
                     <div className={style.tags}>
-                    {tags.map((tag) => (
-                        <Tag content={tag}/>
+                    {tags.map((tag, index) => (
+                        <Tag content={tag} key={index}/>
                     ))}
                     </div>
                 </div>
@@ -39,13 +39,19 @@ function Housing() {
                         <img className={style.photo} src={host.picture} alt="host" />
                     </div>
                     <div className={style.rating}>
-                        <Rating rating={rating}/> 
+                        <Rating rating={+rating}/> 
                     </div>
                 </div>
             </div>
             <div className={style.dropdowns}>
-                    <Dropdown title="Description" size='medium'><span>{description}</span></Dropdown>
-                    <Dropdown title="Equipements" size='medium'><ul className={style.equipments}>{equipments.map(element => <li>{element}</li>)}</ul></Dropdown>
+                    <Dropdown title="Description" size='medium'>
+                        <span>{description}</span>
+                    </Dropdown>
+                    <Dropdown title="Equipements" size='medium'>
+                        <ul className={style.equipments}>
+                            {equipments.map((element, index) => <li key={index}>{element} </li>)}
+                        </ul>
+                    </Dropdown>
                 </div>
         </section>
     );
