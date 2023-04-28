@@ -27,4 +27,4 @@ Dropdown.propTypes = {
     size: PropTypes.oneOf(['small', 'medium', 'big']),
 }
 
-export default Dropdown
+export default Dropdown;

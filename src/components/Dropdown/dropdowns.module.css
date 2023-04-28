@@ -1,6 +1,8 @@
 .container {
     width: 100%;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .wrapper {
@@ -25,6 +27,7 @@
     padding: 35px 13px;
     background-color: #F6F6F6;
     border-radius: 0 0 15px 15px;
+    flex: 1;
 }
 
 .small {

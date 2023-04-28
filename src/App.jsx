@@ -2,6 +2,8 @@ import React from 'react';
 import style from './App.module.css';
 import {Routes, Route, Navigate} from 'react-router-dom'
 
+import Router from './Router'
+
 import Header from './components/Header';
 import Home from './pages/Home';
 import Footer from './components/Footer'
@@ -15,13 +17,7 @@ return (
   <main className={style.main}>
     <div className={style.container}>
       <Header />
-      <Routes>
-        <Route path="/" Component={Home} />
-        <Route path="/about" Component={About} />
-        <Route path="/apartment/:id" Component={Housing} />
-        <Route path="/404" Component={Missdirection} />
-        <Route path="*" element={<Navigate to="/404"/>} />
-      </Routes>
+      <Router />
     </div>
   </main>
   <Footer />
