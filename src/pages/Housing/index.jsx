@@ -44,9 +44,9 @@ function Housing() {
                 </div>
             </div>
             <div className={style.dropdowns}>
-                <Dropdown title="Description"><span>{description}</span></Dropdown>
-                <Dropdown title="Equipements"><ul className={style.equipments}>{equipments.map(element => <li>{element}</li>)}</ul></Dropdown>
-            </div>
+                    <Dropdown title="Description"><span>{description}</span></Dropdown>
+                    <Dropdown title="Equipements"><ul className={style.equipments}>{equipments.map(element => <li>{element}</li>)}</ul></Dropdown>
+                </div>
         </section>
     );
 }

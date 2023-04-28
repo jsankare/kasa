@@ -25,14 +25,14 @@ const dropdowns = [{
 
 function About() {
     return (
-     <>
+     <main className={style.container}>
      <Hero cover={cover}/>
-     <div className={style.container}>
+     <div className={style.wrapper}>
         {dropdowns.map(dropdown =>
-            <Dropdowns className={style.dropdownn} title={dropdown.title} content={dropdown.content} key={dropdown.id}/>
+            <Dropdowns className={style.dropdownn} title={dropdown.title} children={dropdown.content} key={dropdown.id} size="big" />
             )}
      </div>
-     </>
+     </main>
     );
 }
 

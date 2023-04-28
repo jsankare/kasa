@@ -1,6 +1,14 @@
 .container {
     display: flex;
+    width: 1240px;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.wrapper {
+    display: flex;
     flex-direction: column;
     gap: 30px;
-    width: 1205px;
+    width: 1023px;
 }

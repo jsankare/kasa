@@ -4,14 +4,14 @@ import PropTypes from 'prop-types'
 import imgOpen from '../../assets/arrowUp.png'
 import imgClosed from '../../assets/arrowDown.png'
 
-const Dropdown = ({title, children}) => {
+const Dropdown = ({title, children, size='medium'}) => {
     const [isOpen, setIsOpen] = useState(false);
     const handleIsOpen = () => {
         setIsOpen(!isOpen);
     };
-
+console.log(style);
     return (
-        <section className={style.container}>
+        <section className={`${style.container} ${style[size]}`} >
             <div className={style.wrapper} onClick={handleIsOpen}>
                 <h2 className={style.title}>{title}</h2>
                 <img className={style.img} src={isOpen ? imgOpen : imgClosed} alt="" />
@@ -23,7 +23,8 @@ const Dropdown = ({title, children}) => {
 
 Dropdown.propTypes = {
     title: PropTypes.string.isRequired,
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
+    size: PropTypes.oneOf(['small', 'medium', 'big']),
 }
 
 export default Dropdown

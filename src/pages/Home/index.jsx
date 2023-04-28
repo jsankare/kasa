@@ -13,7 +13,7 @@ const Home = () => {
         return navigate(`/apartment/${id}`)
     }
     return (
-     <>
+     <main className={style.container}>
         <Hero cover={cover} title='Chez vous, partout et ailleurs'/>
         <div className={style.apartments}>
             {data.map(apartment =>
@@ -21,7 +21,7 @@ const Home = () => {
                 
                 )}
         </div>
-     </>
+     </main>
     );
 }
 

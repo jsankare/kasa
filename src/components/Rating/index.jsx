@@ -24,7 +24,7 @@ function Rating({ rating }) {
     return stars;
   };
 
-  return <div>{displayStars()}</div>;
+  return <div className={style.container}>{displayStars()}</div>;
 }
 
 Rating.propTypes = {
