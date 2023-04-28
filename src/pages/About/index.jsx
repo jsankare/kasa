@@ -29,7 +29,7 @@ function About() {
      <Hero cover={cover}/>
      <div className={style.wrapper}>
         {dropdowns.map(dropdown =>
-            <Dropdowns className={style.dropdownn} title={dropdown.title} children={dropdown.content} key={dropdown.id} size="big" />
+            <Dropdowns className={style.dropdownn} title={dropdown.title} children={dropdown.content} key={dropdown.id} size="medium" />
             )}
      </div>
      </main>

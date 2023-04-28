@@ -1,6 +1,5 @@
 .container {
     width: 100%;
-    background-color: #F6F6F6;
     border-radius: 10px;
 }
 
@@ -24,8 +23,13 @@
     color: #FF6060;
     line-height: 25.67px;
     padding: 35px 13px;
+    background-color: #F6F6F6;
+    border-radius: 0 0 15px 15px;
 }
 
+.small {
+    font-size: 14px;
+}
 
 .medium {
     font-size: 16px;

@@ -1,5 +1,6 @@
 .container {
-    width: 335px;
+    max-width: 335px;
+    min-width: 150px;
     height: 255px;
     cursor: pointer;
 }
