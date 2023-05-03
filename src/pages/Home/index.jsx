@@ -9,13 +9,15 @@ import { Link } from "react-router-dom";
 const Home = () => {
     return (
      <main className={style.container}>
+        <div className={style.hero}>
         <Hero cover={cover} title='Chez vous, partout et ailleurs'/>
+        </div>
         <div className={style.apartments}>
             {data.map(apartment =>
             <Link to={`/apartment/${apartment.id}`}>
                 <Apartment title={apartment.title} cover={apartment.cover} key={apartment.id} />  
             </Link>
-            )};
+            )}
         </div>
      </main>
     );

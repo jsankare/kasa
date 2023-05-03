@@ -1,4 +1,18 @@
 .main {
    display: flex;
+   flex-direction: column;
+   width: 100%;
+   align-items: center;
+   min-height: 100vh;
+   justify-content: space-between;
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
    justify-content: center;
+   align-items: center;
+   width: 100%;
+   max-width: 1240px;
+   padding-inline: 20px;
 }

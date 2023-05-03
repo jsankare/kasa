@@ -4,11 +4,12 @@
 }
 
 .banner {
-    max-width: 1240px;
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
     margin: 0 auto;
+    width: 100%;
+    max-width: 1240px;
 }
 
 .links__container {
@@ -28,24 +29,28 @@
     text-decoration: underline;
 }
 
-@media only screen and (max-width:769px) {
-    .banner {
-        padding: 14px;
-    }
+@media only screen and (max-width:768px) {
     .links__container li a {
         font-size: 20px;
+    }
+    .links__container {
+        gap: 20px;
     }
 }
 
 @media only screen and (max-width:420px) {
     .logo__container a img {
-        width: 145px;
-        height: 47px;
+        max-width: 145px;
+        max-height: 47px;
     }
     .banner {
         padding: 30px 10px;
+        max-width: 420px;
     }
     .links__container li a {
         font-size: 18px;
+    }
+    .links__container {
+        gap: 10px;
     }
 }
