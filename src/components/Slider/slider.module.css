@@ -1,6 +1,7 @@
 .slider {
     height: 415px;
-    width: 1240px;
+    width: 100%;
+    max-width: 1240px;
     position: relative;
     
 }

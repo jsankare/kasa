@@ -1,5 +1,6 @@
 .main {
     padding: 0 60px;
+    width: 100%;
     max-width: 1250px;
 }
 
@@ -13,6 +14,7 @@
     display: flex;
     color: #FF6A6A;
     margin-top: 30px;
+    width: 100%;
 }
 
 .flat { 
@@ -33,14 +35,6 @@
     display: flex;
     gap: 10px;
     margin-top: 23px;
-}
-
-.tag {
-    background-color: #FF6060;
-    border-radius: 10px;
-    color: white;
-    padding: 5px 30px;
-    font-size: 14px;
 }
 
 .intel {
@@ -88,4 +82,19 @@
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .infos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .host {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .dropdowns {
+        flex-direction: column;
+    }
 }
