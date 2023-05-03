@@ -93,8 +93,18 @@
     .host {
         display: flex;
         flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
     }
     .dropdowns {
         flex-direction: column;
+        gap: 20px;
+    }
+    .dropdowns section {
+        max-width: 100%;
+    }    
+    .intel {
+        margin-bottom: 0px;
     }
 }

@@ -37,3 +37,12 @@
     left: 50%;
     color: white;
 }
+
+@media (max-width: 768px) {
+    .sliderLeftArrow, .sliderRightArrow {
+        height: 20px;
+    }
+    .counter {
+        display: none;
+    }
+}

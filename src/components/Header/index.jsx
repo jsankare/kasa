@@ -13,7 +13,7 @@ function Header() {
             <div className={style.links}>
                 <ul className={style.links__container}>
                     <li><NavLink to='/'>Accueil</NavLink></li>
-                    <li><NavLink to='/about'>A propos</NavLink></li>
+                    <li><NavLink to='/about'>A Propos</NavLink></li>
                 </ul>
             </div>
         </div>
