@@ -14,7 +14,7 @@ const Home = () => {
         </div>
         <div className={style.apartments}>
             {data.map(apartment =>
-            <Link to={`/apartment/${apartment.id}`}>
+            <Link key={apartment.id} to={`/apartment/${apartment.id}`}>
                 <Apartment title={apartment.title} cover={apartment.cover} key={apartment.id} />  
             </Link>
             )}
