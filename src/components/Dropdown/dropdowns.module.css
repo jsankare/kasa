@@ -21,6 +21,10 @@
     height: 13px;
 }
 
+.title {
+    font-weight: normal;
+}
+
 .content {
     color: #FF6060;
     line-height: 25.67px;
