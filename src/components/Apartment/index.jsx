@@ -1,5 +1,6 @@
 import React from "react";
-import style from './apartment.module.css'
+import style from './apartment.module.css';
+import PropTypes from 'prop-types';
 
 function Apartment({title, cover,}) {
     return (
@@ -12,4 +13,9 @@ function Apartment({title, cover,}) {
     )
 }
 
-export default Apartment
+Apartment.propTypes = {
+    cover: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+};
+
+export default Apartment;

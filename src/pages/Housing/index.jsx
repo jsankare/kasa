@@ -2,7 +2,7 @@ import Dropdown from '../../components/Dropdown';
 import Slider from '../../components/Slider'
 import data from '../../datas/datas.json';
 import style from './housing.module.css';
-import Tag from '../../components/Tag'
+import Tag from '../../components/Tag';
 import { Navigate, useParams } from 'react-router-dom';
 import Rating from '../../components/Rating';
 
@@ -21,7 +21,7 @@ function Housing() {
     return (
         <section className={style.main}>
             <div className={style.slider}>
-            <Slider sliderImage={pictures}/>
+                <Slider sliderImage={pictures}/>
             </div>
             <div className={style.infos}>
                 <div className={style.flat}>
@@ -55,6 +55,6 @@ function Housing() {
                 </div>
         </section>
     );
-}
+};
 
-export default Housing
+export default Housing;

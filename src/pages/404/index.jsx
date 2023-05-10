@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './404.module.css';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 function Missdirection() {
     return (
@@ -12,4 +12,4 @@ function Missdirection() {
     );
 }
 
-export default Missdirection
+export default Missdirection;

@@ -11,7 +11,6 @@ function Tag({content}) {
 
 Tag.propTypes = {
     content: PropTypes.string.isRequired,
-    
-}
+};
 
-export default Tag
+export default Tag;

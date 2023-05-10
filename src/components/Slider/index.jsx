@@ -3,14 +3,13 @@ import style from "./slider.module.css";
 import slideLeft from '../../assets/arrowleft.png';
 import slideRight from '../../assets/arrowright.png';
 import { useState } from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const Slider = ({sliderImage = []}) => {
     
     const [currentIndex, setCurrentIndex] = useState(0)
 
     const nextSlide = () => {
-        // useState(prevState => prevState +1)
         setCurrentIndex(currentIndex + 1);
         if(currentIndex === sliderImage.length - 1)
             setCurrentIndex(0)
@@ -50,6 +49,6 @@ const Slider = ({sliderImage = []}) => {
 
 Slider.propTypes = {
     sliderImage: PropTypes.arrayOf(PropTypes.string).isRequired,
-}
+};
 
 export default Slider;

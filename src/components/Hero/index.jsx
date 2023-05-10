@@ -1,25 +1,21 @@
-import React, { useEffect, useState } from "react"; // Combine import statements
-import { useLocation } from "react-router-dom"; // Add ".dom" to import statement
+import React from "react";
 import style from "./hero.module.css";
+import PropTypes from 'prop-types';
 
-function Hero(props) {
-  const [aboutPage, setAboutPage] = useState(false);
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.pathname === "/about") {
-      setAboutPage(true);
-    }
-  }, [location]); // Add "location" as a dependency
-
+function Hero({cover, title}) {
   return (
-    <section className={aboutPage ? style.wrapper : style.wrapperHome}>
+    <section className={style.wrapper}>
       <div className={style.container}>
-        <img className={style.cover} src={props.cover} alt="" />
-        <p className={style.text}>{props.title}</p>
+        <img className={style.cover} src={cover} alt="" />
+        <p className={style.text}>{title}</p>
       </div>
     </section>
   );
 }
+
+Hero.propTypes = {
+  cover: PropTypes.string.isRequired,
+  title: PropTypes.string,
+};
 
 export default Hero;
